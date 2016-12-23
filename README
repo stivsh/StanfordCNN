@@ -1,0 +1,16 @@
+This project contains realisation of algorithms from class
+"Stanford CS231n: Convolutional Neural Networks for Visual Recognition."
+
+Directory linear_models contains realisations of LogisticRegression, SVM,
+Multiclass SVM, SoftMax classifier.
+
+Classifiers interface and common base classes such as:
+  BaseBinaryLinearClassifier,
+  BaseOneVersusAllLinearClassifier,
+  BaseMultyClassClassifier,
+described in linear_models/common.py.
+To create classifier you needs to provide one of this base classes with 3 methods: h, j, dj.
+First returns scores, second is the error function that must minimized
+and the last is the gradient of j.
+All other modules in this directory provides realization of this 3 methods
+ depends on classifier type.
